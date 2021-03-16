@@ -1,0 +1,6 @@
+image: levine_4.dwg.png
+resolution: 0.01224489795 # 0.6m / (636-587) for the south corridor
+origin: [8.4734693814, 5.82244897522, 0]
+occupied_thresh: 0.11
+free_thresh: 0.10
+negate: 0
