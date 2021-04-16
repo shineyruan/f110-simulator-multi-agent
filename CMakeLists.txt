@@ -94,6 +94,9 @@ if(DEFINED CATKIN_DEVEL_PREFIX)
       add_executable(${_node_name} ${_node_file})
       add_dependencies(${_node_name} ${PROJECT_NAME}_generate_messages_cpp)
       target_link_libraries(${_node_name} ${LIBS})
+      install(TARGETS ${_node_name} 
+              RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+      )
   endforeach()
 
   # Install the library
@@ -104,6 +107,11 @@ if(DEFINED CATKIN_DEVEL_PREFIX)
   )
   install(DIRECTORY include/${PROJECT_NAME}/
       DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+  )
+  install(DIRECTORY
+    launch 
+    maps
+    DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
   )
 endif()
 
