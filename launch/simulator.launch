@@ -12,33 +12,33 @@
 
   <!-- Begin the simulator with the parameters from params.yaml -->
   <node pkg="f110_simulator" name="f110_simulator" type="simulator" output="screen">
-    <rosparam command="load" file="$(find f110_simulator)/params.yaml"/>
+    <rosparam command="load" file="$(find f110_simulator)/config/params.yaml"/>
   </node>
 
   <!-- Launch the mux node with the parameters from params.yaml -->
   <node pkg="f110_simulator" name="mux_controller" type="mux" output="screen">
-    <rosparam command="load" file="$(find f110_simulator)/params.yaml"/>
+    <rosparam command="load" file="$(find f110_simulator)/config/params.yaml"/>
   </node>
 
   <!-- Launch the behavior controller node with the parameters from params.yaml -->
   <node pkg="f110_simulator" name="behavior_controller" type="behavior_controller" output="screen">
-    <rosparam command="load" file="$(find f110_simulator)/params.yaml"/>
+    <rosparam command="load" file="$(find f110_simulator)/config/params.yaml"/>
   </node>
 
   <!-- Launch the Random Walker Node -->
   <node pkg="f110_simulator" name="random_walker" type="random_walk" output="screen">
-    <rosparam command="load" file="$(find f110_simulator)/params.yaml"/>
+    <rosparam command="load" file="$(find f110_simulator)/config/params.yaml"/>
   </node>
 
   <!-- Launch the Keyboard Node -->
   <node pkg="f110_simulator" name="keyboard" type="keyboard" output="screen">
-    <rosparam command="load" file="$(find f110_simulator)/params.yaml"/>
+    <rosparam command="load" file="$(find f110_simulator)/config/params.yaml"/>
   </node>
 
   <!-- ***Put launch command for new planner here:-->
   <!-- Launch the New Planner Node -->
   <!--   <node pkg="f110_simulator" name="new node's name" type="new file name" output="screen">
-          <rosparam command="load" file="$(find f110_simulator)/params.yaml"/>
+          <rosparam command="load" file="$(find f110_simulator)/config/params.yaml"/>
   	 </node>    -->
 
 

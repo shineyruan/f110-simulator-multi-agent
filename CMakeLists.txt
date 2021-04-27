@@ -111,6 +111,7 @@ if(DEFINED CATKIN_DEVEL_PREFIX)
   install(DIRECTORY
     launch 
     maps
+    config
     DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
   )
 endif()
